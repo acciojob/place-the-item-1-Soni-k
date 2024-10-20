@@ -1,2 +1,30 @@
 
 /* Your CSS Code here. */
+/* Styling for the holder class */
+.holder {
+  display: flex;
+  justify-content: space-between; /* Ensures items have space between them */
+  flex-wrap: wrap; /* Items will move to the next row if there's no space */
+  width: 100%; /* Takes full width of the container */
+  padding: 10px; /* Add padding for a nicer layout (optional) */
+  box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+/* Styling for the item class */
+.item {
+  flex: 1; /* Each item takes equal space */
+  margin: 0 10px; /* Space between items */
+  text-align: center; /* Centers text inside the item */
+  background-color: lightgray; /* Background color for visibility */
+  padding: 20px; /* Padding for the items */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Fix the margin issue on the first and last items */
+.holder .item:first-child {
+  margin-left: 0; /* Remove the left margin of the first item */
+}
+
+.holder .item:last-child {
+  margin-right: 0; /* Remove the right margin of the last item */
+}
